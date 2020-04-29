@@ -45,19 +45,13 @@ class Dog extends Creature implements Creep{
 class lab2{
     public static void main (String args[]){
         ArrayList<Creature> Creep = new ArrayList<Creature>();
-        for (int i=0;i<10;i++){
-            if ((int) (Math.random()*2)>0){
                 Creep.add(new Dog());
-            }else{
                 Creep.add(new Snake());
-            }
-        }
         for (int j=0;j<Creep.size();j++){
             if (Creep.get(j) instanceof Wriggle){
                 Creep.get(j).whoIam();
                 Creep.get(j).creep();
                 ((Wriggle)Creep.get(j)).wriggle();
-                System.out.println(" ");
             }else{
                 Creep.get(j).whoIam();
                 Creep.get(j).creep();
